@@ -11,7 +11,7 @@ const Products = ({ products }) => {
               id,
               name,
               description,
-              image = product.images[0],
+              src = product.images[0],
               price = product.prices[0].unit_amount / 100,
               priceId = product.prices[0].id,
             } = product;
@@ -20,7 +20,7 @@ const Products = ({ products }) => {
                 key={id}
                 name={name}
                 description={description}
-                src={image}
+                src={src}
                 price={price}
                 onCheckout={() => checkout(priceId)}
               />
