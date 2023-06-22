@@ -26,6 +26,7 @@ function App() {
     <div className="container">
      
     < Header />
+    <h1> Welcome to Travel Accessories store</h1>
     <Products products={products} />
     </div>
   
