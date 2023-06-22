@@ -1,0 +1,35 @@
+.header {
+  gap: 1rem;
+}
+.header-link {
+  display: block;
+  background-color: wheat;
+}
+.logo-img {
+  max-width: 5rem;
+  margin: 0 auto;
+  display: block;
+  background-color: #fece08;
+}
+.nav-list {
+  display: grid;
+  gap: 0.5rem;
+  background-color: rgb(17, 61, 133);
+  text-align: center;
+  list-style-type: none;
+  padding: 1rem;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 1rem;
+}
+
+.nav-list-link {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  width: 6rem;
+  color: #fece08;
+  padding: 2px;
+
+  margin-right: 2.5rem;
+}
