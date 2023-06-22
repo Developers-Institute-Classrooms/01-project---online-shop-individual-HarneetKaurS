@@ -1,30 +1,30 @@
-import logo from "../images/logo.png"
+import logo2 from "../images/logo2.jpg"
+import "./Header.css"
 const Header = () => {
 
     return (
         <header className="header">
-            <div >
+            <a  className = "header-link" href="/">
          <img className="logo-img"
          alt="This is the travel logo"
-         src={logo}
-         width="150"
-         height="150"
+         src={logo2}
+        
          />
-         </div>
+         </a>
         <nav className ="nav">
             <ul className="nav-list">
                 <li>
-                    <a href="/">
+                    <a className="nav-list-link" href="/">
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="/">
+                    <a className="nav-list-link" href="/">
                         Products
                     </a>
                 </li>
                 <li>
-                    <a href="/">
+                    <a className="nav-list-link" href="/">
                         Contact
                     </a>
                 </li>

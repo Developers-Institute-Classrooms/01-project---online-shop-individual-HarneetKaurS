@@ -1,11 +1,12 @@
 import Product from "./Product";
 import { checkout } from "../services/checkout";
+import "./Products.css"
 
 const Products = ({ products }) => {
     return (
       <>
        
-        <ul className="product-grid">
+        <nav className="product-grid">
           {products.map((product) => {
             const {
               id,
@@ -26,7 +27,7 @@ const Products = ({ products }) => {
               />
             );
           })}
-        </ul>
+        </nav>
       </>
     );
   };

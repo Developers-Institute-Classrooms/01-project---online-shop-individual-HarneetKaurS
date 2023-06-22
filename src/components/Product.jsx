@@ -1,12 +1,18 @@
+import "./Product.css"
+
 const Product = ({ src, name, description, price, onCheckout}) => {
     return (
-      <li className="product-grid-item">
-        <img src={src} alt={name} width="150" />
-        <h3>{name}</h3>
-        <p>{description}</p>
-        <p>${price}</p>
-        <button onClick={onCheckout}>Buy now </button>
-      </li>
+      < div className="products-container">
+        
+      <nav className="product-grid-item">
+        <img className="product-image" src={src} alt={name} width="150" />
+        <h3 className="product-name">{name}</h3>
+        <p className="product-description">{description}</p>
+        <p className="product-price">${price}</p>
+        <button className="buy-now" onClick={onCheckout}>Buy now </button>
+      </nav>
+      
+      </div>
     );
   };
   export default Product;
