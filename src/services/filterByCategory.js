@@ -1,8 +1,8 @@
 const filterByCategory = (products, filterBy) => {
-    if (filterBy === "all") {
-      return products;
-    }
-    return products.filter((product) => product.metadata.category === filterBy);
-  };
+  if (filterBy === "all") {
+    return products;
+  }
+  return products.filter((product) => product.metadata.category === filterBy);
+};
 
-  export  {filterByCategory};
+export { filterByCategory };
