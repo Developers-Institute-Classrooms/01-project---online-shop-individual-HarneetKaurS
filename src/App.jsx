@@ -42,7 +42,7 @@ setFilteredProducts(filterByCategory(products, filterBy));
     < Header />
     <h1> Welcome to Travel Accessories store</h1>
     <FilterBy setFilterBy={onFilterProducts} />
-    <Products products={products} />
+    <Products products={filteredProducts} />
     </div>
   
   );
