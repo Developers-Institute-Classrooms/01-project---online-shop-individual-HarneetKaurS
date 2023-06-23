@@ -1,18 +1,30 @@
 import { React, useEffect, useState } from "react";
 import "./App.css";
+import Header from "./components/Header";
+import Products from "./components/Products";
+import FilterBy from "./components/FilterBy";
 
 // The function that makes the fetch request to the Products API
 import { getProducts } from "./services/getProducts";
+
+import { filterByCategory } from "./services/filterByCategory";
 
 function App() {
   // use the products variable to read all of your products
   // and display them on your page
   const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+
+  const onFilterProducts = (filterBy) =>
+    setFilteredProducts(filterByCategory(products, filterBy));
 
   useEffect(() => {
     const loadData = async () => {
       const products = await getProducts();
+
+      console.log(products);
       setProducts(products);
+      setFilteredProducts(products);
     };
 
     loadData();
@@ -20,7 +32,10 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Sunglass Shop</h1>
+      <Header />
+      <h2> Welcome to Travel Accessories store</h2>
+      <FilterBy setFilterBy={onFilterProducts} />
+      <Products products={filteredProducts} />
     </div>
   );
 }

@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgb(17, 61, 133);
+}
+.container {
+  background-color: wheat;
+  font-family: "Courgette", cursive;
+  font-family: "Wix Madefor Text", sans-serif;
+}
