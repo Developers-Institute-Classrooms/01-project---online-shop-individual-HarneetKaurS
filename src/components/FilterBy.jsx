@@ -1,3 +1,5 @@
+import "./FilterBy.css"
+
 const FilterBy = ({ setFilterBy }) => {
     const onChange = (event) => {
         setFilterBy(event.target.value);
@@ -5,7 +7,7 @@ const FilterBy = ({ setFilterBy }) => {
     
       return (
         <div className="filterBy">
-          <label htmlFor="category">Filter by{" "}</label>
+          <label className="filterBy-label" htmlFor="category">Filter by{" "}</label>
           <select id="category" defaultValue="all" onChange={onChange}>
           <option value="all">All</option>
           <option value="Travel Scale">Travel Scale</option>
